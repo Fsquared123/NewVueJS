@@ -12,7 +12,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Licia VueJS',
-			favicon: '/NewVueJS/favicon.ico',
+			favicon: '/NewVueJS//favicon.ico',
 			logo: {
 				src: './src/assets/vuejs-logo.webp',
 				replacesTitle: true,
