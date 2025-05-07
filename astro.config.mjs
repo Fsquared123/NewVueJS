@@ -6,6 +6,9 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://Fsquared123.github.io', // Or custom domain
+  base: '/NewVueJS/', // Only needed if repo isn't USERNAME.github.io
+  output: 'static', // Required for GitHub Pages
 	integrations: [
 		starlight({
 			title: 'Licia VueJS',
