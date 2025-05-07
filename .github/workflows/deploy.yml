@@ -25,13 +25,17 @@ jobs:
           
       - name: Build
         run: npm run build
-          
-      - name: Deploy
+      
+      - name: Verify Build Output
+        run: ls -la dist
+
+      - name: Deploy To Github Pages
         if: github.ref == 'refs/heads/main'  # Only deploy from main
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
            # Add this to force URL logging:
+          force_orphan: true # Create a clean gh-pages branch history    
         env:      
           ACTIONS_STEP_DEBUG: true  # Enable debug logs
