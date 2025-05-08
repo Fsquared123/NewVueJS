@@ -12,14 +12,14 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Licia VueJS',
-			favicon:'./src/assets/favicon.ico',
+			favicon: new URL('./src/assets/favicon.ico', import.meta.url).href,
 			logo: {
 				src: './src/assets/vuejs-logo.webp',
 				replacesTitle: true,
 			},
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' },
-				{ icon: 'linkedin', label: 'GitHub', href: 'https://github.com/withastro/starlight' }
+				{ icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/felicia-franklin-njoku/' }
 				
 			],
 			sidebar: [
