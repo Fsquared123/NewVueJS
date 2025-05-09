@@ -1,0 +1,10 @@
+.sl-markdown-content aside[data-type="note"] {
+    /* Override all note styles */
+    --sl-aside-color: var(--sl-color-note);
+    --sl-aside-background: var(--sl-color-note-bg);
+    --sl-aside-border-color: var(--sl-color-note-border);
+    
+    /* Additional customizations */
+    border-left-width: 4px;
+    border-radius: 0.5rem;
+  }
