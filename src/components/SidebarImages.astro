@@ -1,5 +1,6 @@
 ---
-import { Sidebar as StarlightSidebar } from '@astrojs/starlight/components';
+import './SidebarImages.css';
+import DefaultSidebar from '@astrojs/starlight/components/Sidebar.astro';
 const { entries } = Astro.props;
 ---
 
@@ -97,7 +98,4 @@ const { entries } = Astro.props;
   </aside>
 
   <!-- Main content -->
-  <main style="flex: 1;">
-    <StarlightSidebar {entries} />
-  </main>
 </div>

@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-
+import SidebarImages from './src/components/SidebarImages.astro';
 
 
 // https://astro.build/config
@@ -16,6 +16,9 @@ export default defineConfig({
 			logo: {
 				src: './src/assets/vuejs-logo.webp',
 				replacesTitle: true,
+			},
+			components: {
+				Sidebar: './src/components/SidebarImages.astro'
 			},
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' },
