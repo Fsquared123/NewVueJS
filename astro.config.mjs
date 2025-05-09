@@ -12,9 +12,14 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Licia VueJS',
+			customCss: [
+				// Relative path to your custom CSS file
+				'./src/styles/custom.css',
+			  ],
 			favicon: new URL('./src/assets/favicon.ico', import.meta.url).href,
 			logo: {
-				src: './src/assets/vuejs-logo.webp',
+				light: './src/assets/vuejs-logo.webp',
+    			dark: './src/assets/vuejs-light.webp',
 				replacesTitle: true,
 			},
 			social: [
