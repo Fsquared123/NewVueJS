@@ -3,12 +3,22 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 
-
+// Determine deployment target (default to Vercel)
+const isVercel = !!process.env.VERCEL;
+const isGitHubPages = process.env.DEPLOY_TARGET === 'gh-pages';
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://Fsquared123.github.io', // Or custom domain
-  base: '/NewVueJS/', // Only needed if repo isn't USERNAME.github.io
-  output: 'static', // Required for GitHub Pages
+	 // Dynamic site URL (GitHub Pages vs. Vercel)
+  site: isGitHubPages 
+    ? 'https://Fsquared123.github.io/NewVueJS' 
+    : 'https://vue-js-docs.vercel.app', // Replace with your Vercel URL
+
+  // Dynamic base path (GitHub Pages requires /repo-name/)
+  base: isGitHubPages ? '/NewVueJS/' : '/',
+
+  // Required for GitHub Pages (static output)
+  output: 'static',
+
 	integrations: [
 		starlight({
 			title: 'Licia VueJS',

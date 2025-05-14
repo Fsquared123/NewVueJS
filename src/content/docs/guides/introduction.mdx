@@ -8,3 +8,42 @@ import { Aside } from '@astrojs/starlight/components';
 - Vue 2 support has ended on Dec 31, 2023. Learn more about [Vue 2 EOL](https://v2.vuejs.org/eol/).
 - Upgrading from Vue 2? Check out the [Migration Guide](https://v3-migration.vuejs.org/).
 :::
+
+<Aside type="note">
+
+    <div style={{ display: 'flex', justifyContent: 'left', gap: '1rem' }}>
+
+      <a href="https://www.vuemastery.com/courses/" target="_blank" rel="noopener noreferrer"> 
+            <img src="/src/assets/masteryTutorial.jpeg" alt="VueMastery Image" style={{ maxWidth: '40%', height: 'auto', borderRadius: '0px' }} />
+        </a>
+        Learn Vue with video tutorials on [VueMastery.com](https://www.vuemastery.com/courses/)
+        <a href="https://www.vuemastery.com/courses/" target="_blank" rel="noopener noreferrer">
+            <img src="/src/assets/vueMastery2.jpeg" alt="Monterail Image" style={{ maxWidth: '30%', justifyContent: 'right', height: 'auto', borderRadius: '0px' }} />
+        </a>
+    </div>
+</Aside>
+### What Is Vue
+    Vue (pronounced /vjuː/, like **view**) is a JavaScript framework for building user interfaces. It uses HTML, CSS, and JavaScript to provide a declarative, component-based framework for building complex UIs.
+    
+    Here is a minimal example:
+```js
+    import { createApp } from 'vue'
+
+    createApp({
+  data() {
+    return {
+      count: 0
+    }
+  }
+    }).mount('#app')
+```
+
+```js
+    <div id="app">
+  <button @click="count++">
+    Count is: {{ count }}
+  </button>
+ </div>
+ ```
+
+ **Result**
