@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-
+import SidebarImages from './src/components/SidebarImages.astro';
 
 // Determine deployment target (default to Vercel)
 const isVercel = !!process.env.VERCEL;
@@ -31,6 +31,9 @@ export default defineConfig({
 				light: './src/assets/vuejs-logo.webp',
     			dark: './src/assets/vuejs-light.webp',
 				replacesTitle: true,
+			},
+			components: {
+				Sidebar: './src/components/SidebarImages.astro'
 			},
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/Fsquared123' },

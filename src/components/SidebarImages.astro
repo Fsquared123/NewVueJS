@@ -1,0 +1,101 @@
+---
+import './SidebarImages.css';
+import DefaultSidebar from '@astrojs/starlight/components/Sidebar.astro';
+const { entries } = Astro.props;
+---
+
+<div style="display: flex; height: 100%;">
+  <!-- Left image column -->
+  <aside style=" 
+    width: 200px;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-right: 1px solid #e2e2e2;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  " 
+    title="SPONSORS"
+    >
+    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+        <!-- Row 1 -->
+        <tr>
+          <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">
+            <a href="https://www.aapanel.com/?invite_code=vue" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/aaPanel.png" alt="aaPanel" style="width: 100%; max-width: 120px;">
+            </a>
+          </td>
+          <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">
+            <a href="https://opencollective.com/chrome/projects/2021-frameworks-fund?hostname=opencollective.com&slug=2021-frameworks-fund" target="_blank" rel="noopener">
+              <img src="/assets/chrome.jpeg" alt="Chrome Frameworks" style="width: 100%; max-width: 120px;">
+            </a>
+          </td>
+        </tr>
+        
+        <!-- Row 2 -->
+        <tr>
+          <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">
+            <a href="https://www.coderabbit.ai/?utm_source=github&utm_medium=sponsors&utm_campaign=evan_you_2025" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/coderabbit.png" alt="CodeRabbit" style="width: 100%; max-width: 120px;">
+            </a>
+          </td>
+          <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">
+            <a href="https://www.herodevs.com/support/nes-vue" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/heroDevs.jpeg" alt="HeroDevs" style="width: 100%; max-width: 120px;">
+            </a>
+          </td>
+        </tr>
+        <!-- Row 3 -->
+        <tr>
+            <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">
+              <a href="https://certificates.dev/javascript?friend=VUEJS&ref=vuejs-sponsor" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/JS.png" alt="JavaSript" style="width: 100%; max-width: 120px;">
+              </a>
+            </td>
+            <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">
+              <a href="https://www.monterail.com/services/vue-js-development?+utm_source=sponsorship&utm_medium=logo&utm_campaign=Vue" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/monterail image.png" alt="Monterail" style="width: 100%; max-width: 120px;">
+              </a>
+            </td>
+          </tr>
+          <!-- Row 4 -->
+        <tr>
+            <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">
+              <a href="https://www.storyblok.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/storyBlock.png" alt="StoryBlock" style="width: 100%; max-width: 120px;">
+              </a>
+            </td>
+            <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">
+              <a href="https://vehikl.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/vehikl.png" alt="Vehikl" style="width: 100%; max-width: 120px;">
+              </a>
+            </td>
+          </tr>
+          <!-- Row 5 -->
+        <tr>
+            <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">
+              <a href="https://vuejs.amsterdam/" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/vuejsAmsterdam.jpeg" alt="VueJS Amsterdam" style="width: 100%; max-width: 120px;">
+              </a>
+            </td>
+            <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">
+              <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/vueschool.jpg" alt="Vue School" style="width: 100%; max-width: 120px;">
+              </a>
+            </td>
+          </tr>
+          <!-- Row 6 -->
+        <tr>
+            <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">
+              <a href="https://www.vuemastery.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/vuemastery.jpeg" alt="Vue Mastery" style="width: 100%; max-width: 120px;">
+              </a>
+            </td>
+        </tr>    
+      <!-- Add more rows as needed -->
+    </table>
+  </aside>
+
+  <!-- Main content -->
+</div>
