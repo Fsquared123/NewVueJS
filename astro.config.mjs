@@ -10,11 +10,11 @@ const isGitHubPages = process.env.DEPLOY_TARGET === 'gh-pages';
 export default defineConfig({
 	 // Dynamic site URL (GitHub Pages vs. Vercel)
   site: isGitHubPages 
-    ? 'https://Fsquared123.github.io/NewVueJS' 
+    ? 'https://Fsquared123.github.io' 
     : 'https://vue-js-docs.vercel.app', // Replace with your Vercel URL
 
   // Dynamic base path (GitHub Pages requires /repo-name/)
-  base: isGitHubPages ? '/NewVueJS/' : '/',
+  base: isGitHubPages ? '/NewVueJS' : '/',
 
   // Required for GitHub Pages (static output)
   output: 'static',
@@ -42,7 +42,6 @@ export default defineConfig({
 					label: 'Getting Started',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
 						{ label: 'Introduction', slug: 'guides/introduction' },
 						{ label: 'Quick Start', slug: 'guides/quickstart' },
 					],

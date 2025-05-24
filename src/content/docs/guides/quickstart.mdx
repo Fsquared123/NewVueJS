@@ -2,21 +2,166 @@
 title: Quick Start
 description: Quick start helps you start using Vue JS smoothly with your application.
 ---
+import { Icon } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 
-#### Try Vue Online
-
-- To get a taste of Vue, you can try it directly in our [Playground](https://play.vuejs.org/#eNp9kVFLwzAQx7/KeS9TmBuiT6MOVAbqg4oKvuSltLeuM01CcpmF0u/utaXVhzEISe7/vyS/yzV459ziEAlXmITMl47XylDtrGfIaZtGzdAoA5CnnJ5fDHsATxy9GSOAKhQrmD2S1ha+rNf52Wyw2m6RSUaynB6QgKlyOmWSCCDZXa2bprsF2jZZStSrpXGR4XBZ2Zz0rULxFYqVLKfTOEcOmTXbsljsgzVSRw+lMLOVKzX5V8elNUHhasRVmArnz3OvsY80H/VsR9n3EX0f6k5T+OYpkD+Qwsnj1BfEg735eKFa9pMp5FFL9gnznYLVsWMc0u6jyQX7X15P+1R1PSlN8Rk2NZMJY1EdaP/Jfb5CaebDidL/cK8XN2NzsP0F+HSp8w==/) 
-
+### Try Vue Online
+<br>
+ <span style="display: inline-flex; align-items: center; gap: 0.25rem;">
+ - To get a taste of Vue, you can try it directly in our
+  <Icon name="seti:video" style="ertical-align: middle;" />
+  <a href="https://play.vuejs.org/#eNp9kVFLwzAQx7/KeS9TmBuiT6MOVAbqg4oKvuSltLeuM01CcpmF0u/utaXVhzEISe7/vyS/yzV459ziEAlXmITMl47XylDtrGfIaZtGzdAoA5CnnJ5fDHsATxy9GSOAKhQrmD2S1ha+rNf52Wyw2m6RSUaynB6QgKlyOmWSCCDZXa2bprsF2jZZStSrpXGR4XBZ2Zz0rULxFYqVLKfTOEcOmTXbsljsgzVSRw+lMLOVKzX5V8elNUHhasRVmArnz3OvsY80H/VsR9n3EX0f6k5T+OYpkD+Qwsnj1BfEg735eKFa9pMp5FFL9gnznYLVsWMc0u6jyQX7X15P+1R1PSlN8Rk2NZMJY1EdaP/Jfb5CaebDidL/cK8XN2NzsP0F+HSp8w==">Playground</a>
+</span>
+    </br>
+<br>
 - If you prefer a plain HTML setup without any build steps, you can use this [JSFiddle](https://jsfiddle.net/yyx990803/2ke1ab0z/) as your starting point.
-
+</br>
 - If you are already familiar with Node.js and the concept of build tools, you can also try a complete build setup right within your browser on [StackBlitz](https://stackblitz.com/edit/vitejs-vite-g85d1yz8?terminal=dev)
 
-#### Creating a Vue Application
-import { Aside } from '@astrojs/starlight/components';
+### Creating a Vue Application
+import { Aside } from '@astrojs/starlight/components'
 
 :::note[Prerequisites]
 - Familiarity with the command line
 - Install [Node.js](https://nodejs.org/en) version 18.3 or newer
 :::
 
-In this section we will introduce how to scaffold a Vue [Single Page Application](https://vuejs.org/guide/extras/ways-of-using-vue.html#single-page-application-spa) on your local machine.
+In this section, we will cover how to set up a new Vue [Single Page Application](https://vuejs.org/guide/extras/ways-of-using-vue.html#single-page-application-spa) on your local machine.
+The created project will be using a build setup based on [Vite](https://vite.dev/) and allow us to use Vue [Single-File Components](https://vuejs.org/guide/scaling-up/sfc.html) (SFCs).
+
+Before you start, ensure you have the latest version of [Node.js](https://nodejs.org/en) installed and that your current working directory is the one where you intend to create a project. 
+Run the following command in your terminal (without the `$` sign):
+<Tabs>
+  <TabItem label="npm">
+  ```js
+  $ npm create vue@latest
+  ```
+  </TabItem>
+  <TabItem label="pnpm">
+  ```js
+  $ pnpm create vue@latest
+  ```
+  </TabItem>
+  <TabItem label="yarn">
+  ```js
+  # For Yarn (v1+)
+    $ yarn create vue
+
+    # For Yarn Modern (v2+)
+    $ yarn create vue@latest
+
+    # For Yarn ^v4.11
+    $ yarn dlx create-vue@latest
+    ```
+    </TabItem>
+    <TabItem label="bun">
+    ```js
+    $ bun create vue@latest
+    ```
+    </TabItem>
+</Tabs>
+
+This command will install and execute [create-vue](https://github.com/vuejs/create-vue), the official Vue project setup tool. 
+You will be presented with prompts for several optional features such as TypeScript and testing support:
+
+```typescript 
+    ✔ Project name: … <your-project-name>
+    ✔ Add TypeScript? … No / Yes
+    ✔ Add JSX Support? … No / Yes
+    ✔ Add Vue Router for Single Page Application development? … No / Yes
+    ✔ Add Pinia for state management? … No / Yes
+    ✔ Add Vitest for Unit testing? … No / Yes
+    ✔ Add an End-to-End Testing Solution? … No / Cypress / Nightwatch / Playwright
+    ✔ Add ESLint for code quality? … No / Yes
+    ✔ Add Prettier for code formatting? … No / Yes
+    ✔ Add Vue DevTools 7 extension for debugging? (experimental) … No / Yes
+
+    Setup project in ./<your-project-name>...
+    Done.
+```
+
+If you are unsure about an option, simply choose `No` by hitting enter for now. 
+Once the project is created, follow the instructions to install dependencies and start the dev server:
+<Tabs>
+  <TabItem label="npm">
+  ```shell
+    $ cd <your-project-name>
+    $ npm install
+    $ npm run dev
+  ```
+  </TabItem>
+  <TabItem label="pnpm">
+  ```shell
+    $ cd <your-project-name>
+    $ pnpm install
+    $ pnpm run dev
+  ```
+  </TabItem>
+  <TabItem label="yarn">
+  ```shell
+    $ cd <your-project-name>
+    $ yarn
+    $ yarn dev
+    ```
+    </TabItem>
+    <TabItem label="bun">
+    ```shell
+    $ cd <your-project-name>
+    $ bun install
+    $ bun run dev
+    ```
+    </TabItem>
+</Tabs>
+
+You should now have your first Vue project running! Note that the example components in the generated project are written using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) 
+and `<script setup>`, rather than the [Options API](https://vuejs.org/guide/introduction.html#options-api). Here are some additional tips:
+
+- The recommended IDE setup is [Visual Studio Code](https://code.visualstudio.com/) + [Vue - Official extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar). 
+If you use other editors, check out the [IDE support section](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+- More tooling details, including integration with backend frameworks, are discussed in the [Tooling Guide](https://vuejs.org/guide/scaling-up/tooling.html).
+- To learn more about the underlying build tool Vite, check out the [Vite docs](https://vite.dev/).
+- If you choose to use TypeScript, check out the [TypeScript Usage Guide](https://vuejs.org/guide/typescript/overview.html).
+
+When you are ready to deploy your app to production, run the following:
+<Tabs>
+  <TabItem label="npm">
+  ```shell
+    $ npm run build
+  ```
+  </TabItem>
+  <TabItem label="pnpm">
+  ```shell
+    $ pnpm run build
+  ```
+  </TabItem>
+  <TabItem label="yarn">
+  ```shell
+    $ yarn build
+    ```
+    </TabItem>
+    <TabItem label="bun">
+    ```shell
+    $ bun run build
+    ```
+    </TabItem>
+</Tabs>
+
+This will create a production-ready build of your app in the project's `./dist directory`. 
+Check out the [Production Deployment Guide](https://vuejs.org/guide/best-practices/production-deployment.html) to learn more about deploying your app to production.
+
+<br>
+<span style="display: inline-flex; align-items: center; gap: 0.5rem;">
+    <a href="https://vuejs.org/guide/quick-start.html#next-steps">Next Steps</a>
+    <Icon name="right-caret" /> 
+</span>
+</br>
+
+### Using Vue from CDN​
+You can use Vue directly from a CDN via a script tag:
+
+```html
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+```
+Here we are using [unpkg](https://unpkg.com/), but you can also use any CDN that serves npm packages, 
+for example [jsdelivr](https://www.jsdelivr.com/package/npm/vue) or [cdnjs](https://cdnjs.com/libraries/vue).
+Of course, you can also download this file and serve it yourself.

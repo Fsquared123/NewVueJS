@@ -10,27 +10,105 @@ hero:
     - text: Get started
       link: guides/introduction
       icon: right-arrow
-    - text: Read the VueJS docs
-      link: https://vuejs.org//
+    - text: Why Vue
+      link: https://www.youtube.com/watch?v=bzlFvd0b65c
+      icon: seti:video
+    - text: Install
+      link: https://vuejs.org/guide/quick-start.html
+      icon: seti:argdown
+    - text: Get security updates for Vue 2!
+      link: https://v2.vuejs.org/eol/
       icon: external
-      variant: minimal
+
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
+<div style="
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Equal spacing between all items */
+  margin: 0 auto;
+  max-width: 1000px; /* Adjust as needed */
+  ">
+
+    <span>Special Sponsors</span>
+     <a href="https://www.monterail.com/services/vue-js-development?+utm_source=sponsorship&utm_medium=logo&utm_campaign=Vue">
+      <img 
+	      src="/src/assets/monterail image.png" style="height: 40px; width: auto;" alt="" />
+    </a>
+   Official Vue & Nuxt Partner
+ 
+</div>
+
+
+<div class="grid-table">
+  <div class="grid-header">
+    <div>Approachable</div>
+    <div>Performant</div>
+    <div>Versatile</div>
+  </div>
+  <div class="grid-row">
+    <div>Builds on top of standard HTML, CSS and JavaScript with intuitive API and world-class documentation.</div>
+    <div>Truly reactive, compiler-optimized rendering system that rarely requires manual optimization.</div>
+    <div>A rich, incrementally adoptable ecosystem that scales between a library and a full-featured framework.</div>
+  </div>
+</div>
+
+<style>{`
+  .grid-table {
+    display: grid;
+    width: min(80%, 800px);
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Remove all internal spacing control */
+    gap: 0; /* Eliminates gap between header and rows */
+  }
+  .grid-header, .grid-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Add border instead of margin for separation */
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .grid-header > div {
+    padding: 12px 16px; /* Consistent padding with rows */
+    background: white;
+    font-weight: 600;
+    color: rgb(1, 5, 11);
+    text-align: left;
+    /* Remove margin causing extra space */
+    margin: 0;
+  }
+  .grid-row > div {
+    padding: 12px 16px; /* Match header padding */
+    background: white;
+    text-align: left;
+  }
+`}</style>
+
+<table>
+  <tr>
+    <td><a href="https://www.vuemastery.com/"><img src="/src/assets/vuemastery.jpg" alt="vuemastery" /></a></td>
+    <td><a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1"><img src="/src/assets/vueschool.jpg" alt="Vue School" /></a></td>
+    <td><a href="https://vehikl.com/"><img src="/src/assets/vehikl.jpg" alt="Vehikl" /></a></td>
+  </tr>
+</table>
 ## Next steps
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the VueJS Docs](https://vuejs.org/).
-	</Card>
+  <Card title="Update content" icon="pencil">
+    Edit `src/content/docs/index.mdx` to see this page change.
+  </Card>
+  <Card title="Add new content" icon="add-document">
+    Add Markdown or MDX files to `src/content/docs` to create new pages.
+  </Card>
+  <Card title="Configure your site" icon="setting">
+    Edit your `sidebar` and other config in `astro.config.mjs`.
+  </Card>
+  <Card title="Read the docs" icon="open-book">
+    Learn more in [the VueJS Docs](https://vuejs.org/).
+  </Card>
 </CardGrid>
