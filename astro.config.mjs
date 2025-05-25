@@ -26,7 +26,7 @@ export default defineConfig({
 				// Relative path to your custom CSS file
 				'./src/styles/custom.css',
 			  ],
-			favicon: new URL('./src/assets/favicon.ico', import.meta.url).href,
+			favicon: '/favicon.ico',
 			logo: {
 				light: './src/assets/vuejs-logo.webp',
     			dark: './src/assets/vuejs-light.webp',

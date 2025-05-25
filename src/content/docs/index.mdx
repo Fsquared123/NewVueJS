@@ -5,7 +5,8 @@ template: splash
 hero:
   tagline: An approachable, performant and versatile framework for building web user interfaces.!
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/vue-hero.svg
+    alt: VueHero
   actions:
     - text: Get started
       link: guides/introduction
@@ -24,41 +25,64 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 // import the images
-import vueMastery from '../../assets/vuemastery.jpg';
+import vueMastery from '../../assets/vuemastery.jpeg';
 import vueSchool from '../../assets/vueschool.jpg';
-import vehikl from '../../assets/vehikl.jpg';
+import vehikl from '../../assets/vehikl.png';
 import monterail from '../../assets/monterail image.png';
 
-<div style="
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem; /* Equal spacing between all items */
-  margin: 0 auto;
-  max-width: 1000px; /* Adjust as needed */
+<div class="page-content">
+  <div style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Equal spacing between all items */
+    margin: 0 auto;
+    max-width: 1000px; /* Adjust as needed */
   ">
 
     <span>Special Sponsors</span>
      <a href="https://www.monterail.com/services/vue-js-development?+utm_source=sponsorship&utm_medium=logo&utm_campaign=Vue">
       <img 
-	      src="/src/assets/monterail image.png" style="height: 40px; width: auto;" alt="" />
+	      src="/src/assets/monterail-image.svg" style="height: 40px; width: auto;" alt="" />
     </a>
    Official Vue & Nuxt Partner
- 
-</div>
+ </div>
 
 
-<div class="grid-table">
-  <div class="grid-header">
-    <div>Approachable</div>
-    <div>Performant</div>
-    <div>Versatile</div>
-  </div>
+ <div class="grid-table">
+    <div class="grid-header">
+      <div>**Approachable**</div>
+      <div>Performant</div>
+      <div>Versatile</div>
+   </div>
+
   <div class="grid-row">
     <div>Builds on top of standard HTML, CSS and JavaScript with intuitive API and world-class documentation.</div>
     <div>Truly reactive, compiler-optimized rendering system that rarely requires manual optimization.</div>
     <div>A rich, incrementally adoptable ecosystem that scales between a library and a full-featured framework.</div>
   </div>
+ </div>
+
+  #### Platinum Sponsors
+  <table class="sponsor-table">
+    <tr>
+      <td><a href="https://www.vuemastery.com/" target="_blank" rel="noopener noreferrer"><img src="/src/assets/vuemastery.jpeg" alt="vueMastery" /></a></td>
+      <td><a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" rel="noopener noreferrer"><img src="/src/assets/vueschool.jpg" alt="Vue School" /></a></td>
+      <td><a href="https://vehikl.com/" target="_blank" rel="noopener noreferrer"><img src="/src/assets/vehikl.png" alt="Vehikl" /></a></td>
+   </tr>
+
+   <tr>
+     <td><a href="https://vuejs.amsterdam/" target="_blank" rel="noopener noreferrer"><img src="/src/assets/vuejsAmsterdam.jpeg" alt="VueJs Amsterdam" /></a></td>
+     <td><a href="https://www.storyblok.com/" target="_blank" rel="noopener noreferrer"><img src="/src/assets/storyBlock.png" alt="Story Block" /></a></td>
+     <td><a href="https://opencollective.com/2021-frameworks-fund" target="_blank" rel="noopener noreferrer"><img src="/src/assets/chrome.jpeg" alt="Chrome" /></a></td>
+   </tr>
+
+   <tr>
+     <td><a href="https://vuejs.amsterdam/" target="_blank" rel="noopener noreferrer"><img src="/src/assets/vuejsAmsterdam.jpeg" alt="VueJs Amsterdam" /></a></td>
+     <td><a href="https://www.storyblok.com/" target="_blank" rel="noopener noreferrer"><img src="/src/assets/storyBlock.png" alt="Story Block" /></a></td>
+     <td><a href="https://opencollective.com/2021-frameworks-fund" target="_blank" rel="noopener noreferrer"><img src="/src/assets/chrome.jpeg" alt="Chrome" /></a></td>
+   </tr>
+ </table>
 </div>
 
 <style>{`
@@ -84,6 +108,8 @@ import monterail from '../../assets/monterail image.png';
     font-weight: 600;
     color: rgb(1, 5, 11);
     text-align: left;
+    font-size: 1.2rem; /* Increased font size for headers */
+
     /* Remove margin causing extra space */
     margin: 0;
   }
@@ -92,15 +118,28 @@ import monterail from '../../assets/monterail image.png';
     background: white;
     text-align: left;
   }
+
+  .sponsor-table {
+    width: min(50%, 500px); /* Adjust width as needed */
+    margin: 1rem auto; /* Center the table horizontally */
+    border-collapse: collapse;
+    background: #d7fadd
+  }
+  .sponsor-table td {
+    text-align: center; /* Center images in table cells */
+    padding: 1rem; /* Add padding for better spacing */
+    border: 1px solid #e0e0e0; /* Subtle border */
+  }
+  /* Add styles for table images */
+  .sponsor-table img {
+    width: 300px; /* Adjust this value as needed */
+    height: 80px; /* Maintains aspect ratio */
+    align: center;
+    display: block;
+    margin: 0 auto; /* Center images in table cells */
+  }
 `}</style>
 
-<table>
-  <tr>
-    <td><a href="https://www.vuemastery.com/"><img src="/src/assets/vuemastery.jpg" alt="vuemastery" /></a></td>
-    <td><a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1"><img src="/src/assets/vueschool.jpg" alt="Vue School" /></a></td>
-    <td><a href="https://vehikl.com/"><img src="/src/assets/vehikl.jpg" alt="Vehikl" /></a></td>
-  </tr>
-</table>
 ## Next steps
 
 <CardGrid stagger>
