@@ -26,7 +26,7 @@ hero:
 import { Card, CardGrid } from '@astrojs/starlight/components';
 // import the images
 import vueMastery from './src/assets/vuemastery.jpeg';
-import vueSchool from './src/assets/vueschool.jpg';
+import vueSchool from './src/assets/vueschool.avif';
 import vehikl from './src/assets/vehikl.png';
 import monterail from './src/assets/monterail image.png';
 
@@ -43,7 +43,7 @@ import monterail from './src/assets/monterail image.png';
     <span>Special Sponsors</span>
      <a href="https://www.monterail.com/services/vue-js-development?+utm_source=sponsorship&utm_medium=logo&utm_campaign=Vue">
       <img 
-	      src="/monterail-image.svg" style="height: 40px; width: auto;" alt="" />
+	      src="/src/assets/monterail-image.svg" style="height: 40px; width: auto;" alt="" />
     </a>
    Official Vue & Nuxt Partner
  </div>
@@ -66,21 +66,27 @@ import monterail from './src/assets/monterail image.png';
   #### Platinum Sponsors
   <table class="sponsor-table">
     <tr>
-      <td><a href="https://www.vuemastery.com/" target="_blank" rel="noopener noreferrer"><img src="/vuemastery.jpeg" alt="vueMastery" /></a></td>
-      <td><a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" rel="noopener noreferrer"><img src="/vueschool.jpg" alt="Vue School" /></a></td>
-      <td><a href="https://vehikl.com/" target="_blank" rel="noopener noreferrer"><img src="/vehikl.png" alt="Vehikl" /></a></td>
+      <td><a href="https://www.vuemastery.com/" target="_blank" rel="noopener noreferrer"><img src="/src/assets/vuemastery.jpeg" alt="vueMastery" /></a></td>
+      <td><a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" rel="noopener noreferrer"><img src="/src/assets/vueschool.avif" alt="Vue School" /></a></td>
+      <td><a href="https://vehikl.com/" target="_blank" rel="noopener noreferrer"><img src="/src/assets/vehikl.png" alt="Vehikl" /></a></td>
    </tr>
 
    <tr>
-     <td><a href="https://vuejs.amsterdam/" target="_blank" rel="noopener noreferrer"><img src="/vuejsAmsterdam.jpeg" alt="VueJs Amsterdam" /></a></td>
-     <td><a href="https://www.storyblok.com/" target="_blank" rel="noopener noreferrer"><img src="/storyBlock.png" alt="Story Block" /></a></td>
-     <td><a href="https://opencollective.com/2021-frameworks-fund" target="_blank" rel="noopener noreferrer"><img src="/chrome.jpeg" alt="Chrome" /></a></td>
+     <td><a href="https://vuejs.amsterdam/" target="_blank" rel="noopener noreferrer"><img src="/src/assets/vue-js-amsterdam.avif" alt="VueJs Amsterdam" /></a></td>
+     <td><a href="https://www.storyblok.com/" target="_blank" rel="noopener noreferrer"><img src="/src/assets/storyBlock.png" alt="Story Block" /></a></td>
+     <td><a href="https://opencollective.com/2021-frameworks-fund" target="_blank" rel="noopener noreferrer"><img src="/src/assets/chrome.jpeg" alt="Chrome" /></a></td>
    </tr>
 
    <tr>
-     <td><a href="https://vuejs.amsterdam/" target="_blank" rel="noopener noreferrer"><img src="/vuejsAmsterdam.jpeg" alt="VueJs Amsterdam" /></a></td>
-     <td><a href="https://www.storyblok.com/" target="_blank" rel="noopener noreferrer"><img src="/storyBlock.png" alt="Story Block" /></a></td>
-     <td><a href="https://opencollective.com/2021-frameworks-fund" target="_blank" rel="noopener noreferrer"><img src="/chrome.jpeg" alt="Chrome" /></a></td>
+     <td><a href="https://www.herodevs.com/support/nes-vue" target="_blank" rel="noopener noreferrer"><img src="/src/assets/heroDevs.jpeg" alt="HeroDevs" /></a></td>
+     <td><a href="https://certificates.dev/javascript?friend=VUEJS&ref=vuejs-sponsor" target="_blank" rel="noopener noreferrer"><img src="/src/assets/JS.png" alt="Story Block" /></a></td>
+     <td><a href="https://www.coderabbit.ai/?utm_source=github&utm_medium=sponsors&utm_campaign=evan_you_2025" target="_blank" rel="noopener noreferrer"><img src="/src/assets/coderabbit.png" alt="Chrome" /></a></td>
+   </tr>
+
+   <tr>
+     <td><a href="https://www.aapanel.com/?invite_code=vue" target="_blank" rel="noopener noreferrer"><img src="/src/assets/aaPanel.png" alt="VueJs Amsterdam" /></a></td>
+     <td><a href="https://imagekit.io/?utm_source=vuejs&utm_medium=referral&utm_campaign=oss-sponsorship&utm_content=homepage" target="_blank" rel="noopener noreferrer"><img src="/src/assets/imagekit-io.svg" alt="Story Block" /></a></td>
+     <td><a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener noreferrer">Become a Sponsor</a></td>
    </tr>
  </table>
 </div>
@@ -120,10 +126,10 @@ import monterail from './src/assets/monterail image.png';
   }
 
   .sponsor-table {
-    width: min(50%, 500px); /* Adjust width as needed */
+    width: min(70%, 800px); /* Adjust width as needed */
     margin: 1rem auto; /* Center the table horizontally */
     border-collapse: collapse;
-    background: #d7fadd
+    
   }
   .sponsor-table td {
     text-align: center; /* Center images in table cells */
